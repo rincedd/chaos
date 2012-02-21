@@ -1,6 +1,6 @@
-from matplotlib.backend_bases import MouseEvent, KeyEvent
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.backend_bases import MouseEvent, KeyEvent
 
 class OutOfBoundsError(ArithmeticError):
     def __init__(self, val, bounds, *args, **kwargs):
