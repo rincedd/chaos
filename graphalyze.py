@@ -55,6 +55,8 @@ class GraphicalAnalysis(object):
             x.append(self.orbit[i])
             y.append(self.orbit[i])
             y.append(self.orbit[i + 1])
+        x.append(self.orbit[-1])
+        y.append(self.orbit[-1])
         ax = self.figure.gca()
         if self.line is not None:
             self.line.set_data(x, y)
@@ -91,5 +93,5 @@ if __name__ == '__main__':
     def quad(x, mu):
         return mu * x * (1 - x)
 
-    g = GraphicalAnalysis(lambda x: quad(x, 3.3))
+    g = GraphicalAnalysis(lambda x: quad(x, 3.7))
     plt.show()
